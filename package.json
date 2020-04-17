@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/meganelndn/forms-and-restdb/issues"
   },
-  "homepage": "https://github.com/meganelndn/forms-and-restdb#readme"
+  "homepage": "https://github.com/meganelndn/forms-and-restdb#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
