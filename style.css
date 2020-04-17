@@ -1,0 +1,23 @@
+form {
+    background-color: lightcoral;
+    padding: 20px;
+}
+
+#country {
+    width: 115px;
+    height: 25px;
+}
+
+.label {
+    font-size: 20px;
+    margin: 20px 0 3px 0;
+}
+
+input {
+    background: whitesmoke;
+    height: 15px;
+}
+
+input#submit-btn {
+    color: lightcoral;
+}

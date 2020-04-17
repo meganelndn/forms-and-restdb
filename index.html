@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and restdb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+        <h1>Choose your country </h1>
+
+        <!----- country ------>
+        <div class="label">
+            Country
+        </div>
+        <select id="country">
+            <option>
+                Australia
+            </option>
+            <option>
+                Zimbabwe
+            </option>
+        </select>
+
+        <!------ area ------->
+        <div class="label">
+            Area
+        </div>
+        <input type="number" id="area"><span> km²</span>
+
+        <!---- language ------->
+        <div class="label">
+            Language
+        </div>
+        <input type="text" id="language">
+
+        <!----- cities ------->
+        <div class="label">
+            Three biggest cities
+        </div>
+        <div>
+            <input id="city1" type="checkbox">
+            <label for="city1">City1</label>
+        </div>
+        <div>
+            <input id="city2" type="checkbox">
+            <label for="city2">City2</label>
+        </div>
+        <div>
+            <input id="city3" type="checkbox">
+            <label for="city3">City3</label>
+        </div>
+
+        <input type="submit" id="submit-btn">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
