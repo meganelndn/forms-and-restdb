@@ -13,46 +13,47 @@
         <h1>Choose your country </h1>
 
         <!----- country ------>
-        <div class="label">
+        <label>
             Country
-        </div>
-        <select id="country">
+        </label>
+        <select id="country" name="country">
             <option>
-                Australia
+                Sweden
             </option>
             <option>
-                Zimbabwe
+                Australia
             </option>
         </select>
 
         <!------ area ------->
-        <div class="label">
+        <label>
             Area
-        </div>
-        <input type="number" id="area"><span> km²</span>
+        </label>
+        <input type="number" id="area" name="area" value=0><span> km²</span>
 
         <!---- language ------->
-        <div class="label">
+        <label>
             Language
-        </div>
-        <input type="text" id="language">
+        </label>
+        <input type="text" id="language" name="language">
 
         <!----- cities ------->
-        <div class="label">
-            Three biggest cities
-        </div>
-        <div>
-            <input id="city1" type="checkbox">
-            <label for="city1">City1</label>
-        </div>
-        <div>
-            <input id="city2" type="checkbox">
-            <label for="city2">City2</label>
-        </div>
-        <div>
-            <input id="city3" type="checkbox">
-            <label for="city3">City3</label>
-        </div>
+        <label>
+            Three biggest cities:
+        </label>
+        <label>
+            <input type="checkbox" name="three_bigges_cities" value="Malmö">
+            Malmö
+        </label>
+        <label>
+            <input type="checkbox" name="three_bigges_cities" value="Gothenburg">
+            Gotheburg
+        </label>
+        <label>
+            <input type="checkbox" name="three_bigges_cities" value="Stockholm">
+            Stockholm
+        </label>
+
 
         <input type="submit" id="submit-btn">
     </form>

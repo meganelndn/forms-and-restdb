@@ -3,14 +3,21 @@ form {
     padding: 20px;
 }
 
+input,
+select,
+label {
+    display: block;
+}
+
 #country {
     width: 115px;
     height: 25px;
 }
 
-.label {
+label {
     font-size: 20px;
     margin: 20px 0 3px 0;
+
 }
 
 input {
