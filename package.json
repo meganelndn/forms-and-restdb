@@ -1,0 +1,20 @@
+{
+  "name": "forms-and-restdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel *.html",
+    "build": "parcel build *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganelndn/forms-and-restdb.git"
+  },
+  "author": "Mégane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganelndn/forms-and-restdb/issues"
+  },
+  "homepage": "https://github.com/meganelndn/forms-and-restdb#readme"
+}
