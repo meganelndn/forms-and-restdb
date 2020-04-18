@@ -10,18 +10,6 @@ const elements = form.elements;
 //to access elements from everywhere: 
 window.elements = elements;
 
-
-// HOW TO VALIDATE CORRECTLY
-/* 
-1. remove all error msgs
-2. loop through
-3. show custom error msgs 
-    - create with JS
-    - have them in the DOM hide/show
-    - "post" data
-*/
-
-
 //disable "area" when "unknown" is clicked
 elements.unknown.addEventListener("click", e => {
     elements.area.disabled = !elements.area.disabled;
@@ -55,7 +43,15 @@ form.addEventListener("submit", e => {
 
     if (form.checkValidity() && validForm) {
         //send to restdb/api
-        console.log("submit ready");
+        postCountry({
+            country: form.elements.country.value,
+            area: form.elements.area.value, // TODO
+            language: form.elements.language.value,
+            //take array=[checked] && create new one
+            cities: checked.map(el => el.value),
+        });
+        //reset form when submitted
+        form.reset();
         // ADDING VALIDATION IN CASE OF ERROR
     } else {
         formElements.forEach(el => {
@@ -65,3 +61,34 @@ form.addEventListener("submit", e => {
         });
     }
 });
+
+// "POST" FUNCTION
+function postCountry(payload) {
+    const postData = JSON.stringify(payload);
+    fetch(endpoint, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                "x-apikey": apiKey,
+                "cache-control": "no-cache",
+            },
+            body: postData,
+        })
+        .then(res => res.json())
+        .then(payload => console.log(payload));
+}
+
+
+
+
+// !NOTES
+
+// HOW TO VALIDATE CORRECTLY
+/* 
+1. remove all error msgs
+2. loop through
+3. show custom error msgs 
+    - create with JS
+    - have them in the DOM hide/show
+    - "post" data
+*/
