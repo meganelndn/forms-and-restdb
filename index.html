@@ -29,33 +29,42 @@
         <label>
             Area
         </label>
-        <input type="number" id="area" name="area" value=0><span> km²</span>
+        <input type="number" name="area" value=0><span> km²</span>
+
+        <label>
+            <input type="checkbox" name="unknown">
+            Unknown area
+        </label>
 
         <!---- language ------->
         <label>
             Language
         </label>
-        <input type="text" id="language" name="language">
+        <input type="text" id="language" name="language" required>
 
         <!----- cities ------->
         <label>
             Three biggest cities:
         </label>
         <label>
-            <input type="checkbox" name="three_bigges_cities" value="Malmö">
+            <input type="checkbox" name="three_biggest_cities" value="Malmö">
             Malmö
         </label>
         <label>
-            <input type="checkbox" name="three_bigges_cities" value="Gothenburg">
+            <input type="checkbox" name="three_biggest_cities" value="Gothenburg">
             Gotheburg
         </label>
         <label>
-            <input type="checkbox" name="three_bigges_cities" value="Stockholm">
+            <input type="checkbox" name="three_biggest_cities" value="Stockholm">
             Stockholm
+        </label>
+        <label>
+            <input type="checkbox" name="three_biggest_cities" value="Stockholm">
+            Kiruna
         </label>
 
 
-        <input type="submit" id="submit-btn">
+        <input type="submit" value="Save">
     </form>
 
     <script src="script.js"></script>
