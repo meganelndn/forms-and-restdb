@@ -144,6 +144,7 @@ function deleteCountry(id) {
         .then(res => res.json())
         .then(data => {});
 
+    //remove selected country from restdb
     document.querySelector(`article[data-id="${id}"]`).remove();
 }
 
@@ -159,3 +160,10 @@ function deleteCountry(id) {
     - have them in the DOM hide/show
     - "post" data
 */
+
+// HOW TO POPULATE A FORM => "PUT"
+/* 
+1. fetch the content again (in case someone changed something in the database)
+2. populate the form
+3. handle submit, same validation
+ */
