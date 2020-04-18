@@ -16,7 +16,8 @@
         <label>
             Country
         </label>
-        <select id="country" name="country">
+        <select id="country" name="country" required>
+            <option></option>
             <option>
                 Sweden
             </option>
@@ -24,6 +25,7 @@
                 Australia
             </option>
         </select>
+        <p>Please select a country</p>
 
         <!------ area ------->
         <label>
@@ -41,28 +43,29 @@
             Language
         </label>
         <input type="text" id="language" name="language" required>
+        <p>Please provide the selected country's language</p>
 
         <!----- cities ------->
-        <label>
-            Three biggest cities:
-        </label>
-        <label>
-            <input type="checkbox" name="three_biggest_cities" value="Malmö">
-            Malmö
-        </label>
-        <label>
-            <input type="checkbox" name="three_biggest_cities" value="Gothenburg">
-            Gotheburg
-        </label>
-        <label>
-            <input type="checkbox" name="three_biggest_cities" value="Stockholm">
-            Stockholm
-        </label>
-        <label>
-            <input type="checkbox" name="three_biggest_cities" value="Stockholm">
-            Kiruna
-        </label>
-
+        <fieldset>
+            <legend>Cities</legend>
+            <p class="hidden">Please select at least one city</p>
+            <label>
+                <input type="checkbox" name="cities" value="Malmö">
+                Malmö
+            </label>
+            <label>
+                <input type="checkbox" name="cities" value="Gothenburg">
+                Gotheburg
+            </label>
+            <label>
+                <input type="checkbox" name="cities" value="Stockholm">
+                Stockholm
+            </label>
+            <label>
+                <input type="checkbox" name="cities" value="Stockholm">
+                Kiruna
+            </label>
+        </fieldset>
 
         <input type="submit" value="Save">
     </form>

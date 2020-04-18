@@ -28,3 +28,20 @@ input {
 input#submit-btn {
     color: lightcoral;
 }
+
+.invalid {
+    border: 1px solid red;
+}
+
+input+p,
+select+p {
+    display: none;
+}
+
+input.invalid+p {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
