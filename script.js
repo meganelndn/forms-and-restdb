@@ -3,6 +3,17 @@ import {
     apiKey
 } from "./modules/settings";
 
+window.addEventListener("load", init);
+
+function init() {
+    setUpForm();
+    getCountries();
+}
+
+function setUpForm() {
+
+}
+
 const form = document.querySelector("form");
 //to access form from everywhere: 
 window.form = form;
@@ -62,7 +73,7 @@ form.addEventListener("submit", e => {
     }
 });
 
-// "POST" FUNCTION
+// "POST" data
 function postCountry(payload) {
     const postData = JSON.stringify(payload);
     fetch(endpoint, {
@@ -75,10 +86,46 @@ function postCountry(payload) {
             body: postData,
         })
         .then(res => res.json())
-        .then(payload => console.log(payload));
+        //whenever form filled out, browser updates with new country autom.
+        .then(data => {
+            console.log(data);
+            showCountry(data);
+        });
 }
 
+// "GET" data
+function getCountries() {
+    fetch(endpoint, {
+            method: "get",
+            headers: {
+                "accept": "application/json",
+                "x-apikey": apiKey,
+                "cache-control": "no-cache",
+            }
+        })
+        .then(res => res.json())
+        .then(data => data.forEach(showCountry));
+}
 
+const template = document.querySelector("template").content;
+const countryContainer = document.querySelector("#countryList");
+
+function showCountry(country) {
+    const clone = template.cloneNode(true);
+
+    clone.querySelector("h1").textContent = country.country;
+    clone.querySelector("h2").textContent = country.area;
+    clone.querySelector("h3").textContent = country.language;
+
+    const ul = clone.querySelector("ul");
+    country.cities.forEach(ctr => {
+        const li = document.createElement("li");
+        li.textContent = ctr;
+        ul.appendChild(li);
+    })
+
+    countryContainer.appendChild(clone);
+}
 
 
 // !NOTES

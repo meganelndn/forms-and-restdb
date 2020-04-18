@@ -62,13 +62,30 @@
                 Stockholm
             </label>
             <label>
-                <input type="checkbox" name="cities" value="Stockholm">
+                <input type="checkbox" name="cities" value="Kiruna">
                 Kiruna
             </label>
         </fieldset>
-
         <input type="submit" value="Save">
     </form>
+
+    <button class="add-new">Add Country</button>
+
+    <template>
+        <article>
+            <header>
+                <h1></h1>
+            </header>
+            <h2>Area:</h2>
+            <h3>Language:</h3>
+            <h4>Cities:
+                <ul></ul>
+            </h4>
+            <button class="delete-me">Delete</button>
+        </article>
+    </template>
+
+    <div id="countryList"></div>
 
     <script src="script.js"></script>
 </body>
