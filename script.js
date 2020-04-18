@@ -117,6 +117,10 @@ function showCountry(country) {
     clone.querySelector("h2").textContent = country.area;
     clone.querySelector("h3").textContent = country.language;
 
+    //give the button && article a [data-id=""] && event listeners
+    clone.querySelector(`[data-action="delete"]`).addEventListener("click", e => deleteCountry(country._id));
+    clone.querySelectorAll(`article, button[data-action="delete"]`).forEach(el => el.dataset.id = country._id);
+
     const ul = clone.querySelector("ul");
     country.cities.forEach(ctr => {
         const li = document.createElement("li");
@@ -125,6 +129,22 @@ function showCountry(country) {
     })
 
     countryContainer.appendChild(clone);
+}
+
+// "DELETE" data
+function deleteCountry(id) {
+    fetch(endpoint + "/" + id, {
+            method: "delete",
+            headers: {
+                "accept": "application/json",
+                "x-apikey": apiKey,
+                "cache-control": "no-cache",
+            }
+        })
+        .then(res => res.json())
+        .then(data => {});
+
+    document.querySelector(`article[data-id="${id}"]`).remove();
 }
 
 

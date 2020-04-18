@@ -72,7 +72,7 @@
     <button class="add-new">Add Country</button>
 
     <template>
-        <article>
+        <article data-id>
             <header>
                 <h1></h1>
             </header>
@@ -81,7 +81,8 @@
             <h4>Cities:
                 <ul></ul>
             </h4>
-            <button class="delete-me">Delete</button>
+            <!-- "data-action" makes it easier to grab with JS -->
+            <button data-action="delete" class="delete" data-id>Delete</button>
         </article>
     </template>
 
