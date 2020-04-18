@@ -28,10 +28,10 @@ form.addEventListener("submit", e => {
     console.log("submitted")
 })
 
-/* // JS POWERED VALIDATION
-const formIsValid = form.checkValidity();
+// JS POWERED VALIDATION
+/* const formIsValid = form.checkValidity();
 if (formIsValid) {
     console.log("yay!")
 } else {
     console.log("not ready for submit")
-} */
+}  */
