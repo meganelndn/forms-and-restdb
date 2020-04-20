@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <form>
+    <form data-state="post">
         <h1>Choose your country </h1>
 
         <!----- country ------>
         <label>
             Country
         </label>
-        <select id="country" name="country" required>
+        <select id="country" name="country">
             <option></option>
             <option>
                 Sweden
@@ -83,6 +83,7 @@
             </h4>
             <!-- "data-action" makes it easier to grab with JS -->
             <button data-action="delete" class="delete">Delete</button>
+            <button data-action="edit" class="edit">Edit</button>
         </article>
     </template>
 
