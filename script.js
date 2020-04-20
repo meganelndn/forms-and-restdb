@@ -50,7 +50,7 @@ function setUpForm() {
         }
 
         if (form.checkValidity() && validForm) {
-            if (form.dataset.state = "post") {
+            if (form.dataset.state == "post") {
                 //send to restdb/api
                 postCountry({
                     country: form.elements.country.value,
